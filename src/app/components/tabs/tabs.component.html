@@ -1,0 +1,22 @@
+<div class='h-full flex flex-col justify-between items-center'>
+    <div class="w-full">
+        <app-languages *ngIf="this.currentTab === 'languages'"></app-languages>
+        <app-techstacks *ngIf="this.currentTab === 'techstacks'"></app-techstacks>
+        <app-equipments *ngIf="this.currentTab === 'equipments'"></app-equipments>
+        <app-projects *ngIf="this.currentTab === 'projects'"></app-projects>
+        <app-shop *ngIf="this.currentTab === 'shop'"></app-shop>
+    </div>
+    <div class="w-full flex justify-start items-center">
+        <app-tab-button class='flex-1' name="언어" [isActive]="this.currentTab === 'languages'"
+            (click)="this.currentTab = 'languages'"></app-tab-button>
+        <app-tab-button class='flex-1' name="테크 스택" [isActive]="this.currentTab === 'techstacks'"
+            (click)="this.currentTab = 'techstacks'"></app-tab-button>
+        <app-tab-button class='flex-1' name="장비" [isActive]="this.currentTab === 'equipments'"
+            (click)="this.currentTab = 'equipments'"></app-tab-button>
+        <app-tab-button class='flex-1' name="프로젝트" [isActive]="this.currentTab === 'projects'"
+            (click)="this.currentTab = 'projects'"></app-tab-button>
+        <app-tab-button class='flex-1' name="상점" [isActive]="this.currentTab === 'shop'"
+            (click)="this.currentTab = 'shop'">
+        </app-tab-button>
+    </div>
+</div>
